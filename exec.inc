@@ -147,3 +147,4 @@ tsr:
     mov     sp, bx
 
     jmp     exec_exit
+;-- vim: set filetype=fasm:

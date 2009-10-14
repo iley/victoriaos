@@ -15,3 +15,4 @@ include 'victoria.inc'
     syscall SC_PUTC
     loop    loop0
     ret
+;-- vim: set filetype=fasm:

@@ -41,3 +41,4 @@ file_not_exist:
     syscall SC_OPEN_FILE
     syscall SC_CLOSE_FILE
     ret
+;-- vim: set filetype=fasm:

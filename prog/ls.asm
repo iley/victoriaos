@@ -61,3 +61,4 @@ exit:
     mov     al, [std_text_attr]
     syscall SC_SET_TEXT_ATTR
     ret
+;-- vim: set filetype=fasm:

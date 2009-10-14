@@ -92,3 +92,4 @@ emsg_file_not_open    db 'File is not open', EOLN, 0
 emsg_file_exist       db 'File is already exists', EOLN, 0
 emsg_fname_len        db 'Wrong file name', 27h,'s length', EOLN, 0
 emsg_too_big_file     db 'Too big file', EOLN, 0
+;-- vim: set filetype=fasm:

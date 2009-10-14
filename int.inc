@@ -113,3 +113,4 @@ int_reboot:
     pop     ds dx ax
     iret
 
+;-- vim: set filetype=fasm:

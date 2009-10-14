@@ -23,3 +23,4 @@ start:
     mov     al, [attr]
     syscall SC_SET_TEXT_ATTR
     syscall SC_TERMINATE
+;-- vim: set filetype=fasm:

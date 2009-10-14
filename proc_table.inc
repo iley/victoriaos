@@ -42,3 +42,4 @@ proc_table  dw  get_ver     ; 00
             dw  set_text_attr; 20
             dw  0feh - 20h dup (default)
             dw  init        ; FF
+;-- vim: set filetype=fasm:

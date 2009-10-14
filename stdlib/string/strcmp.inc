@@ -23,3 +23,4 @@ strcmp:
   strcmp_exit:
     pop     di si ax
     ret
+;-- vim: set filetype=fasm:

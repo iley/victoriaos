@@ -20,3 +20,4 @@ start:
     syscall SC_PUTC
     ret
 buffer:
+;-- vim: set filetype=fasm:

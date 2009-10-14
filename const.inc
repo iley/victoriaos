@@ -88,3 +88,4 @@ ver_info                db      'Victoria OS, version 0.03, written by Strukov I
 ; misc
 FIRST_KBD_CHAR          equ     30
 DEF_VIDEO_MODE          equ     3
+;-- vim: set filetype=fasm:

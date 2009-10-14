@@ -371,3 +371,4 @@ width_loop:
     popa
 
     ret
+;-- vim: set filetype=fasm:

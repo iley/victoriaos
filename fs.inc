@@ -1021,3 +1021,4 @@ file_exists:
   file_exists_exit:
     pop     si
     ret
+;-- vim: set filetype=fasm:

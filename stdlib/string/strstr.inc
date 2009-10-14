@@ -40,3 +40,4 @@ strstr:
 
     pop     es di dx cx ax
     ret
+;-- vim: set filetype=fasm:

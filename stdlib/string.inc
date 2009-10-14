@@ -11,3 +11,4 @@ include 'string\strcpy.inc'
 include 'string\strcmp.inc'
 include 'string\strlen.inc'
 include 'string\strtok.inc'
+;-- vim: set filetype=fasm:

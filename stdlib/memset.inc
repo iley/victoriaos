@@ -18,3 +18,4 @@ memset:
 	rep		stosb
 	pop		es di cx ax
 	ret
+;-- vim: set filetype=fasm:

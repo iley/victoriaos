@@ -83,3 +83,4 @@ scan_found1:
     ret
 
 buffer:
+;-- vim: set filetype=fasm:

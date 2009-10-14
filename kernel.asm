@@ -443,3 +443,4 @@ sp_backup   dw ?
 
 ; arrays.inc must be included last
 include 'arrays.inc'
+;-- vim: set filetype=fasm:

@@ -16,7 +16,7 @@
 #define SSIZE 	512
 #define IMAGE_SIZE (SSIZE*SECT*CYL*2)
 
-main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 	int offset, side, cyl, sect, sect_written;
 	register int i;
 	char c;

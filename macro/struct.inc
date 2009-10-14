@@ -217,3 +217,4 @@ macro define@substruct parent,name,[field,type,def]
 			   rb sizeof.#parent#field - ($-field)
 			  end if \\}
    common \} }
+;-- vim: set filetype=fasm:

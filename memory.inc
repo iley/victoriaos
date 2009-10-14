@@ -72,3 +72,4 @@ free:
     pop     cx ax
     ret
 
+;-- vim: set filetype=fasm:

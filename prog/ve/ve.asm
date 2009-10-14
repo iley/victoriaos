@@ -1723,3 +1723,4 @@ update_screen:
 
     buf_size    = 0fff8h-$-256
     buffer      db buf_size dup (?)
+;-- vim: set filetype=fasm:

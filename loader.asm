@@ -151,3 +151,4 @@ dseg = 0500h
 spam_buffer:
 	spam	db (7dfeh - $) dup (0)
 	db		55h, 0aah
+;-- vim: set filetype=fasm:

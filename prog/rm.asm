@@ -54,3 +54,4 @@ rem_file:
 
     ret
 buffer:
+;-- vim: set filetype=fasm:

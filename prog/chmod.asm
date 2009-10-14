@@ -106,3 +106,4 @@ scan_found1:
     syscall SC_SET_ATTR
     
     ret
+;-- vim: set filetype=fasm:

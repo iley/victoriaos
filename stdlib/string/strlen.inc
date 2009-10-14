@@ -23,3 +23,4 @@ strlen:
   strlen_exit:
     pop     si ax
     ret
+;-- vim: set filetype=fasm:

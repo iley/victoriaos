@@ -502,3 +502,4 @@ define_JNCONDEXPR
 define_JCONDEXPR
 define_JNCONDEL
 define_JCONDEL
+;-- vim: set filetype=fasm:

@@ -31,3 +31,4 @@ strchr:
 
     pop     dx ax
     ret
+;-- vim: set filetype=fasm:

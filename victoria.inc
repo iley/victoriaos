@@ -105,3 +105,4 @@ SCR_HEIGHT equ 25
 EM_HIDE             equ   00000000b
 EM_SHOW             equ   00000001b ;display error messages
 EM_TERMINATE        equ   00000010b ;terminate program
+;-- vim: set filetype=fasm:

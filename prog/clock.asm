@@ -91,3 +91,4 @@ start:
     syscall SC_PUTS
 
     int     52h
+;-- vim: set filetype=fasm:

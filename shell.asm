@@ -217,3 +217,4 @@ buffer=cmd_buffer+sizeof.cmd_buffer
 sizeof.buffer=100h
 new_buffer=buffer+sizeof.buffer
 sizeof.new_buffer=100h
+;-- vim: set filetype=fasm:

@@ -140,3 +140,4 @@ atoi_hex:
   atoi_hex_add:
   	add		ax, bx
 	jmp		atoi_hex_loop
+;-- vim: set filetype=fasm:

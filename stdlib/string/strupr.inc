@@ -32,3 +32,4 @@ strupr:
 
 	pop		es di si ax
 	ret
+;-- vim: set filetype=fasm:

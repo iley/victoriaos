@@ -7,3 +7,4 @@
 ; (at your option) any later version.
 
 include 'stdlib\string.inc'
+;-- vim: set filetype=fasm:

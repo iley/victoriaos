@@ -502,3 +502,4 @@ exit:
         ret
 
 old_data:
+;-- vim: set filetype=fasm:

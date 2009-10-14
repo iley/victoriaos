@@ -89,3 +89,4 @@ strtok:
   strtok_exit:
 	pop		di cx ax
   	ret
+;-- vim: set filetype=fasm:
