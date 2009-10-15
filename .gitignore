@@ -1,0 +1,7 @@
+prog/*.bin
+prog/ve/*.bin
+*.swp
+disk.img
+kernel.1.0.3.bin
+loader.0.0.1.bin
+shell.1.0.13.bin
