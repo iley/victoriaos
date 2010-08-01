@@ -1,5 +1,4 @@
 FASM = ./fasm/fasm
-IMGWRITE = ./imgwrite
 IMAGE_FILE = disk.img
 
 BINFILES = \
@@ -114,5 +113,8 @@ loader.0.0.1.bin: loader.asm victoria.inc const.inc
 	${FASM} loader.asm loader.0.0.1.bin
 	${IMGWRITE} ${IMAGE_FILE} 0 0 1 loader.0.0.1.bin
 
-${IMGWRITE}: imgwrite.c
+imgwrite: imgwrite.c
 	gcc -o imgwrite imgwrite.c
+
+vfs: vfs.c
+	gcc -o vfs vfs.c
