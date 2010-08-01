@@ -57,12 +57,12 @@ free:
 
     sub     cx, FIRST_SEG
 
-	shr		cx, 12
+    shr     cx, 12
     xor     ax, ax
     inc     ax
-	test	cx, cx
-	jz		free_skip_shl
-	shl		ax, cl
+    test    cx, cx
+    jz      free_skip_shl
+    shl     ax, cl
   free_skip_shl:
     or      [cs:mem_table], ax
     jmp     free_exit
