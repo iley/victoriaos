@@ -27,9 +27,6 @@ BINFILES = \
 
 default: ${IMGWRITE} ${IMAGE_FILE}
 
-${IMGWRITE} : imgwrite.c
-	gcc -o ${IMGWRITE} $^
-
 run: ${IMAGE_FILE}
 	qemu -m 1 -fda ${IMAGE_FILE} -boot a
 
