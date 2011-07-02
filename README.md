@@ -1,9 +1,8 @@
 BUILDING
 ========
 
-Requires gcc and make
-
 On Linux:
+Requires gcc and make
 
 > make
 
