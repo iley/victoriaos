@@ -1,5 +1,6 @@
 FASM = ./fasm/fasm
 IMAGE_FILE = disk.img
+IMGWRITE = ./imgwrite
 
 BINFILES = \
 	prog/type.1.0.16.bin \
@@ -22,9 +23,12 @@ BINFILES = \
 	shell.1.0.13.bin \
 	dir.0.0.14.bin \
 	loader.0.0.1.bin \
-	fat.0.0.2.bin \
+	fat.0.0.2.bin
 
-default: ${IMAGE_FILE}
+default: ${IMGWRITE} ${IMAGE_FILE}
+
+${IMGWRITE} : imgwrite.c
+	gcc -o ${IMGWRITE} $^
 
 run: ${IMAGE_FILE}
 	qemu -m 1 -fda ${IMAGE_FILE} -boot a
