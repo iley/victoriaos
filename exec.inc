@@ -9,6 +9,7 @@
 ;PSP is a Program Segment Prefix
 PSP_ERR_MODE    equ  002h   ;4 is sizeof.term_instr
 PSP_CMD_LINE    equ  080h
+PSP_CMD_LINE_LEN equ 020h
 PSP_CODE_START  equ  100h
 
 term_instr:
@@ -32,9 +33,12 @@ exec:
     ;allocate segment for the program
     call    malloc
 
+    push    cx
     ;copy command line into PSP
     mov     di, PSP_CMD_LINE
-    call    strcpy
+    mov     cx, PSP_CMD_LINE_LEN
+    call    strncpy
+    pop     cx
 
     mov     word[es:PSP_ERR_MODE], DEF_ERR_MODE
     
