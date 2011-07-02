@@ -58,6 +58,7 @@ clean:
 	rm -f	kernel.1.0.3.bin && true
 	rm -f	shell.1.0.13.bin && true
 	rm -f	loader.0.0.1.bin && true
+	rm -f imgwrite
 
 string.inc: stdlib/string.inc
 stdlib/string.inc: stdlib/memset.inc stdlib/string/strcpy.inc stdlib/string/strcmp.inc stdlib/string/strlen.inc stdlib/string/strtok.inc
