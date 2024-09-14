@@ -35,11 +35,36 @@ run: $(IMAGE_FILE)
 debug: $(IMAGE_FILE)
 	qemu -m 1 -fda $(IMAGE_FILE) -boot a -s -S
 
-$(IMAGE_FILE): $(BINFILES)
+$(IMAGE_FILE): $(IMGWRITE) $(BINFILES)
 	$(IMGWRITE) $(IMAGE_FILE) 0 1 11 logo.bin
-	$(IMGWRITE) $(IMAGE_FILE) 1 1 4 autoexec.bin
+	$(IMGWRITE) $(IMAGE_FILE) 1 1  4 autoexec.bin
 	$(IMGWRITE) $(IMAGE_FILE) 0 0 14 dir.bin
-	$(IMGWRITE) $(IMAGE_FILE) 0 0 2 fat.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 0  2 fat.bin
+	$(IMGWRITE) $(IMAGE_FILE) 1 0 16 prog/type.bin
+	$(IMGWRITE) $(IMAGE_FILE) 1 0 17 prog/cp.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 15 prog/ve/ve.bin
+	$(IMGWRITE) $(IMAGE_FILE) 1 1  5 prog/chmod.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 13 prog/touch.bin
+	$(IMGWRITE) $(IMAGE_FILE) 1 0 14 prog/hello.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 3 prog/mandel.bin
+	$(IMGWRITE) $(IMAGE_FILE) 1 0 15 prog/ls.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 14 prog/clock.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 1 prog/rm.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 7 prog/ver.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 2 prog/mv.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 8 prog/jolia.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 1 6 prog/clear.bin
+	$(IMGWRITE) $(IMAGE_FILE) 1 0 3 kernel.bin
+	$(IMGWRITE) $(IMAGE_FILE) 1 0 13 shell.bin
+	$(IMGWRITE) $(IMAGE_FILE) 0 0 1 loader.bin
+
+prog/ls.asm: stdlib/string/strlen.inc
+
+kernel.asm: victoria.inc proc_table.inc const.inc errors.inc string.inc fs.inc int.inc memory.inc exec.inc arrays.inc
+
+shell.asm: victoria.inc string.inc
+
+loader.asm: victoria.inc const.inc
 
 clean:
 	rm -f $(IMAGE_FILE) $(BINFILES) $(IMGWRITE)
