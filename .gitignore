@@ -1,6 +1,5 @@
 prog/*.bin
 prog/ve/*.bin
-*.swp
 disk.img
 kernel.bin
 loader.bin
