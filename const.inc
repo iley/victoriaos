@@ -1,10 +1,4 @@
 ; VictoriaOS: miscellaneous constants
-; Copyright Ilya Strukov, 2008
-
-; This program is free software; you can redistribute it and/or modify
-; it under the terms of the GNU General Public License as published by
-; the Free Software Foundation; either version 2 of the License, or
-; (at your option) any later version.
 
 ;================================================
 ; boolean constants
@@ -74,7 +68,7 @@ SCR_HEIGHT              equ     25
 
 ;================================================
 ; memory constants
-FIRST_SEG               equ      1000h       ;first empty segment
+FIRST_SEG               equ     01000h       ;first empty segment
 LAST_SEG                equ     0f000h
 SEG_NUM                 equ     15
 
@@ -82,7 +76,7 @@ SEG_NUM                 equ     15
 ; version info
 VER_MAJOR               equ     0
 VER_RELEASE             equ     2
-ver_info                db      'Victoria OS, version 0.03, written by Strukov I.V.', 0
+ver_info                db      'Victoria OS, version 0.03, written by Ilya Strukov', 0
 
 ;================================================
 ; misc

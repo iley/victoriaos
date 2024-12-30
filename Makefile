@@ -1,5 +1,4 @@
 FASM=fasm
-# QEMU=qemu
 QEMU=qemu-system-i386
 
 BINFILES=\

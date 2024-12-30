@@ -1,10 +1,4 @@
 ; VictoriaOS: program execution module
-; Copyright Ilya Strukov, 2008
-
-; This program is free software; you can redistribute it and/or modify
-; it under the terms of the GNU General Public License as published by
-; the Free Software Foundation; either version 2 of the License, or
-; (at your option) any later version.
 
 ;PSP is a Program Segment Prefix
 PSP_ERR_MODE    equ  002h   ;4 is sizeof.term_instr
