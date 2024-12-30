@@ -1,4 +1,6 @@
 FASM=fasm
+# QEMU=qemu
+QEMU=qemu-system-i386
 
 BINFILES=\
 	prog/type.bin \
@@ -22,10 +24,10 @@ BINFILES=\
 default: disk.img
 
 run: disk.img
-	qemu -m 1 -fda disk.img -boot a
+	$(QEMU) -m 1 -drive file=disk.img,index=0,if=floppy,format=raw -boot a
 
 debug: disk.img
-	qemu -m 1 -fda disk.img -boot a -s -S
+	$(QEMU) -m 1 -fda disk.img -boot a -s -S
 
 disk.img: imgwrite $(BINFILES)
 	./imgwrite disk.img  0  0  1 loader.bin
