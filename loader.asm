@@ -25,12 +25,12 @@ jmp start
     msg_welcome db 'Welcome to ', 0
 
 run_autoexec:
-    ;load autoexec file to spam_buffer
+    ;load autoexec file to temp_buffer
     mov     dx, autoexec_fname
 
     mov     al, O_READ
     syscall SC_OPEN_FILE
-    mov     dx, spam_buffer
+    mov     dx, temp_buffer
     syscall SC_READ
     syscall SC_CLOSE_FILE
 
@@ -38,7 +38,7 @@ run_autoexec:
     jz      run_autoexec_skip_autoexec
     
     cld
-    mov     si, spam_buffer
+    mov     si, temp_buffer
   run_autoexec_loop:
     mov     dx, si
 
@@ -117,7 +117,7 @@ start:
     syscall SC_PUTS
 
     ;get os info string
-    mov     dx, spam_buffer
+    mov     dx, temp_buffer
     syscall SC_GET_VER
     
     ;print os info
@@ -148,7 +148,7 @@ start:
 buffer = 0000h
 dseg = 0500h
 
-spam_buffer:
-	spam	db (7dfeh - $) dup (0)
+temp_buffer:
+	db (7dfeh - $) dup (0)
 	db		55h, 0aah
 ;-- vim: set filetype=fasm:
