@@ -92,7 +92,7 @@ set_vect:
 ;================================================
 ; #proc devision by zero handler (debug version)
 
-div_zero_msg db 13, 'Divizion by zero!!!', 13, 0
+div_zero_msg db 13, 'Division by zero!', 13, 0
 int_div_zero:
     push    cs
     pop     ds
